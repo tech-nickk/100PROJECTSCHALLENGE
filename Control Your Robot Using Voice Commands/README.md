@@ -107,6 +107,6 @@ Navigate to File, select Examples and navigate to Examples from Custom Libraries
 Open the Serial Monitor, you should now see the ML model working. In order to make sure its working properly, after the keyword labels (front, back, noise and stop) you should see the predictions being printed to the screen. When the ML model detects the keywords front, back, right, left or stop on speech, one of the predictions output, or probability, should go up and get closer to one.
 
 
-### Modifying the Program and Using it to control our robot
+### Modifying the Program and Using it to control our robot via Bluetooth
 
 How can you control your robot if a keyword is detected on speech?

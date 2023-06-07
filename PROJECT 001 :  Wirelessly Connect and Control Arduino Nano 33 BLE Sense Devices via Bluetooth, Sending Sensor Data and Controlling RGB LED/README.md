@@ -181,6 +181,8 @@ Steps to set up:
         }
         return gesture;
     }
+    
+```
 
 4. Upload the code for the receiver device to the other Arduino Nano 33 BLE Sense board.
 
@@ -318,13 +320,15 @@ void writeGesture(int gesture) {
     }      
 }
 
+```
+
 
 
 5. Power on both devices and ensure they are in close proximity for the Bluetooth connection.
 
 6. Monitor the serial output of the receiver device to observe the received sensor data and the resulting RGB LED control.
 
-7. To make the devices workindependently without a connection to the serial monitor, coment out this part of the code '''cpp while (!Serial);
+7. To make the devices workindependently without a connection to the serial monitor, coment out this part of the code ```cpp while (!Serial); ```
 
 ## Customization and Expansion
 

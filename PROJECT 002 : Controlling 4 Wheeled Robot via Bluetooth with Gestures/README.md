@@ -420,3 +420,4 @@ For more detailed information and additional resources, refer to the Arduino Doc
 
 ## Licence
 
+This project is licensed under the MIT License.

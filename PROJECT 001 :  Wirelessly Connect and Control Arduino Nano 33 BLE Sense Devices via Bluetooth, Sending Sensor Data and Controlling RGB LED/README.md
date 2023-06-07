@@ -1,6 +1,13 @@
 # Wirelessly Connect and Control Arduino Nano 33 BLE Sense Devices via Bluetooth, Sending Sensor Data and Controlling RGB LED
 
+My main aim for doing this project is to learn how to:
+- Access the in_built sensor data 
+- Learn Bluetooth® Low Energy Basics
+- Exchange information between two Arduino boards through Bluetooth® Low Energy.
+
+
 This project demonstrates how to establish a Bluetooth connection between two Arduino Nano 33 BLE Sense devices. It enables wireless transmission of sensor data from one device to another, which is then used to control the onboard RGB LED.
+
 
 ## Prerequisites
 
@@ -31,23 +38,12 @@ Steps to set up:
 ### Sender/Central Device Code Snippet
 
 ```cpp
-    /*
-      BLE_Central_Device.ino
+   
+     //BLE_Central_Device
 
-      This program uses the ArduinoBLE library to set-up an Arduino Nano 33 BLE Sense 
-      as a central device and looks for a specified service and characteristic in a 
-      peripheral device. If the specified service and characteristic is found in a 
-      peripheral device, the last detected value of the on-board gesture sensor of 
-      the Nano 33 BLE Sense, the APDS9960, is written in the specified characteristic. 
 
-      The circuit:
-      - Arduino Nano 33 BLE Sense. 
-
-      This example code is in the public domain.
-    */
-
-    #include <ArduinoBLE.h>
-    #include <Arduino_APDS9960.h>
+    #include <ArduinoBLE.h>         //Include the ArduinoBLE library for bluetooth
+    #include <Arduino_APDS9960.h>  //Include the Arduino_APDS9960 for the builtin gesture sensor
 
     const char* deviceServiceUuid = "19b10000-e8f2-537e-4f6c-d104768a1214";
     const char* deviceServiceCharacteristicUuid = "19b10001-e8f2-537e-4f6c-d104768a1214";
@@ -190,20 +186,11 @@ Steps to set up:
 
 ```cpp
 
-/*
-  BLE_Peripheral.ino
 
-  This program uses the ArduinoBLE library to set-up an Arduino Nano 33 BLE 
-  as a peripheral device and specifies a service and a characteristic. Depending 
-  of the value of the specified characteristic, an on-board LED gets on. 
+ // BLE_Peripheral
 
-  The circuit:
-  - Arduino Nano 33 BLE. 
 
-  This example code is in the public domain.
-*/
-
-#include <ArduinoBLE.h>
+#include <ArduinoBLE.h> //Include the arduinoBLE library
       
 enum {
   GESTURE_NONE  = -1,
@@ -279,7 +266,7 @@ void writeGesture(int gesture) {
   Serial.println("- Characteristic <gesture_type> has changed!");
   
    switch (gesture) {
-      case GESTURE_UP:
+      case GESTURE_UP: ////Turn on the red LED on when the UP gesture is detected
         Serial.println("* Actual value: UP (red LED on)");
         Serial.println(" ");
         digitalWrite(LEDR, LOW);
@@ -287,7 +274,7 @@ void writeGesture(int gesture) {
         digitalWrite(LEDB, HIGH);
         digitalWrite(LED_BUILTIN, LOW);
         break;
-      case GESTURE_DOWN:
+      case GESTURE_DOWN: //Turn on the green LED on when the DOWN gesture is detected
         Serial.println("* Actual value: DOWN (green LED on)");
         Serial.println(" ");
         digitalWrite(LEDR, HIGH);
@@ -295,7 +282,7 @@ void writeGesture(int gesture) {
         digitalWrite(LEDB, HIGH);
         digitalWrite(LED_BUILTIN, LOW);
         break;
-      case GESTURE_LEFT:
+      case GESTURE_LEFT: //Turn on the blue LED on when the LEFT gesture is detected
         Serial.println("* Actual value: LEFT (blue LED on)");
         Serial.println(" ");
         digitalWrite(LEDR, HIGH);
@@ -303,7 +290,7 @@ void writeGesture(int gesture) {
         digitalWrite(LEDB, LOW);
         digitalWrite(LED_BUILTIN, LOW);
         break;
-      case GESTURE_RIGHT:
+      case GESTURE_RIGHT: //Turn on the builtin LED on when the RIGHT gesture is detected
         Serial.println("* Actual value: RIGHT (built-in LED on)");
         Serial.println(" ");
         digitalWrite(LEDR, HIGH);
@@ -311,7 +298,7 @@ void writeGesture(int gesture) {
         digitalWrite(LEDB, HIGH);
         digitalWrite(LED_BUILTIN, HIGH);
         break;
-      default:
+      default: //Turn OFF all the LEDs on when the no gesture is detected
         digitalWrite(LEDR, HIGH);
         digitalWrite(LEDG, HIGH);
         digitalWrite(LEDB, HIGH);
@@ -329,6 +316,15 @@ void writeGesture(int gesture) {
 6. Monitor the serial output of the receiver device to observe the received sensor data and the resulting RGB LED control.
 
 7. To make the devices workindependently without a connection to the serial monitor, coment out this part of the code ```cpp while (!Serial); ```
+
+
+## Troubleshooting
+Sometimes errors occur, if one of the codes is not working there are some common issues we can troubleshoot:
+
+- Syntax error in the code
+- Arduino board connected to the wrong port.
+- Accidental interruption of cable connection.
+
 
 ## Customization and Expansion
 

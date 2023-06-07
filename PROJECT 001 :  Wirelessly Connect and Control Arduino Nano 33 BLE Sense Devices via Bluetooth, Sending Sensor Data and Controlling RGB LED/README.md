@@ -334,3 +334,7 @@ Feel free to customize and expand upon this project. You can modify the code to 
 
 For more detailed information and additional resources, refer to tis [Arduino documentation](https://docs.arduino.cc/tutorials/nano-33-ble-sense/ble-device-to-device) for working with Arduino Nano 33 BLE Sense and Bluetooth connectivity.
 
+## Licence
+
+This project is licensed under the MIT License.
+

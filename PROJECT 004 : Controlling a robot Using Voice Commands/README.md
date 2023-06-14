@@ -47,6 +47,8 @@ An edge device refers to a hardware component responsible for managing the movem
 
 First, create an Edge Impulse account , and create a new project called voice_control.
 
+<img src="https://1drv.ms/i/s!AqEmhY-KSm9SiHOBuC24EPv9kuac?e=UaQ0Tt">
+
 ### Creating and Curating a Dataset
 
 We are ready to start acquiring data for our model. Let's train a ML model that would let you identify keywords in speech, with the keywords: front, back, right, left and stop.

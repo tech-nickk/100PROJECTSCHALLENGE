@@ -100,11 +100,20 @@ This is a very basic example of data collection with Edge Impulse. If you want t
 
 Now that we have all the data samples, it's time to design an impulse. An impulse, in a nutshell, is how your ML model is being trained, is where you define the actions that are going to be performed on your input data to make them better suited for ML and a learning block that defines the algorithm for the data classification. Navigate to Impulse design on the left menu and then select Add a processing block and add Audio (MFCC), then select Add learning block and add Classification (Keras). Keep all of the settings at their defaults for each block. Click on the Save impulse button.
 
+![Creating Impulse](https://github.com/tech-nickk/100PROJECTSCHALLENGE/blob/4f48040b726df10fccb28d1d57ebd70a85abf20d/PROJECT%20005%20%3A%20Controlling%20a%20robot%20Using%20Voice%20Commands/photos/create%20impulse.png)
+
+
 ### Generating the Impulse Features
 
 Now, let's generate the features from the input data. With features we are referring to the unique properties of our collected data that will be used by the classification algorithm, to detect keywords in speech. For now, do not change the default settings and parameters.
 
+![save parameters](https://github.com/tech-nickk/100PROJECTSCHALLENGE/blob/4f48040b726df10fccb28d1d57ebd70a85abf20d/PROJECT%20005%20%3A%20Controlling%20a%20robot%20Using%20Voice%20Commands/photos/features.png)
+
+
 Click on the Save parameters button and then go to the Generate features tab and click on the Generate features button. This process might take some time to complete depending on the size of your dataset. When the process is done you can inspect the obtained results.
+
+![generate features](https://github.com/tech-nickk/100PROJECTSCHALLENGE/blob/4f48040b726df10fccb28d1d57ebd70a85abf20d/PROJECT%20005%20%3A%20Controlling%20a%20robot%20Using%20Voice%20Commands/photos/generate%20features.png)
+
 
 On the right side you can see a representation of your dataset features.
 

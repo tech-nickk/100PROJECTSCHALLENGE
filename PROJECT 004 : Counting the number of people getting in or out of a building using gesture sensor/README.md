@@ -3,6 +3,15 @@
 ## Introduction
 The People Counting Device is a system designed to accurately count the number of people entering or exiting a building. It utilizes the Arduino Nano 33 BLE Sense, which comes with a built-in gesture sensor and Bluetooth capability. This documentation provides an overview of the device, its features, use cases, and advantages.
 
+
+## Goals
+The goals of this project are:
+
+- Learn how to acces and use the inbuilt APDS9960 gesture and proximity sensor.
+- Create an algorithm to identify and count the direction of gesture which indicates the direction of motion.
+- Send data in Arduino Nano 33 BLE Sense boards via Bluetooth
+- Learn how to use oled dispaly and display the count poll on oled display
+
 ## Features
 - Built-in gesture sensor: The Arduino Nano 33 BLE Sense incorporates a gesture sensor (APDS9960), allowing it to detect movements and gestures accurately.
 - Bluetooth communication: The device uses Bluetooth Low Energy (BLE) to wirelessly transmit the count data to another Arduino Nano 33 BLE Sense or compatible device.
@@ -10,10 +19,11 @@ The People Counting Device is a system designed to accurately count the number o
 - Compact and portable: The small form factor of the Arduino Nano 33 BLE Sense makes the device easy to install discreetly and transport if necessary.
 
 ## Building it
-## Prerequisites
- - Two Arduino Nano 33 BLE Sense boards
- - USB cable for Arduino Nano 33 BLE Sense
- - Computer with Arduino IDE installed or the Arduino web editor
+
+ ## Prerequisites
+  - Two Arduino Nano 33 BLE Sense boards
+  - USB cable for Arduino Nano 33 BLE Sense
+  - Computer with Arduino IDE installed or the Arduino web editor
 
 
 ## Usage

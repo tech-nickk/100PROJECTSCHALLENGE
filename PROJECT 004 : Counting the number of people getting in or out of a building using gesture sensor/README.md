@@ -71,6 +71,6 @@ Several peripheral devices can be used to take poll at different entrances or ex
 
 
 ## Conclusion
-Summarize the key points covered in the documentation, emphasizing the benefits and advantages of using the people counting device. Encourage users to explore the possibilities and provide contact information for further assistance or support.
+
 
 

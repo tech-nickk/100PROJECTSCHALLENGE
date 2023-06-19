@@ -49,6 +49,9 @@ Several peripheral devices can be used to take poll at different entrances or ex
 - Cost-effective: The use of Arduino Nano 33 BLE Sense and the built-in gesture sensor provides an affordable solution for people counting compared to more complex and expensive alternatives.
 
 ## Troubleshooting
+- Make sure the gesture sensitivity is set to 80
+- Ensure that the board is correctly connected to your pc when uploading the code
+
 
 
 ## Resources

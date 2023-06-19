@@ -54,12 +54,27 @@ First, create an Edge Impulse account , and create a new project called voice_co
 
 We are ready to start acquiring data for our model. Let's train a ML model that would let you identify keywords in speech, with the keywords: front, back, right, left and stop.
 
-The first step is to create a representative dataset of the selected keywords that the ML model is supposed to identify. On Edge Impulse, navigate to Data acquisition on the left menu and then go to the USB icon on the upper right corner and click it to connect your boatrd through web USB. NOTE that you must be using Chrome or Microsoft Edge browser for this to work!. On the Sensor option select the built-in microphone. Set the sample length (in milliseconds) to 2,500 and leave the Frequency (in Hz) as 16,000.
+The first step is to create a representative dataset of the selected keywords that the ML model is supposed to identify. On Edge Impulse, navigate to Data acquisition on the left menu and then go to the USB icon on the upper right corner and click it to connect your boatrd through web USB.
+
+![Alt Text](https://github.com/tech-nickk/100PROJECTSCHALLENGE/blob/5ecb31447c1b0e67374381d74db7ca4eb73a363d/PROJECT%20005%20%3A%20Controlling%20a%20robot%20Using%20Voice%20Commands/photos/data%20acquisition.png)
+
+
+NOTE that you must be using Chrome or Microsoft Edge browser for this to work!. On the Sensor option select the built-in microphone. Set the sample length (in milliseconds) to 2,500 and leave the Frequency (in Hz) as 16,000.
+
+![Alt Text]([image_url](https://github.com/tech-nickk/100PROJECTSCHALLENGE/blob/5ecb31447c1b0e67374381d74db7ca4eb73a363d/PROJECT%20005%20%3A%20Controlling%20a%20robot%20Using%20Voice%20Commands/photos/collect%20data%20using%20web%20usb.png))
+
+
+![Alt Text]([image_url](https://github.com/tech-nickk/100PROJECTSCHALLENGE/blob/5ecb31447c1b0e67374381d74db7ca4eb73a363d/PROJECT%20005%20%3A%20Controlling%20a%20robot%20Using%20Voice%20Commands/photos/select%20%20BLE.png))
+
+
 
 
 ### Collecting New Data
 
 Now, in the Label write front and click on the Start sampling button. This will start sampling your Nano 33 BLE Sense board built-in microphone for 2500 milliseconds. In this period of time say the keyword front, but remember to have the microphone close to you. Record at least 50 samples and repeat this also for the other keywords, back, right, left and stop. You should now start seeing the collected data (each recorded sample) and a graph of each recorded sample on Edge Impulse.
+
+![Alt Text]([image_ur](https://github.com/tech-nickk/100PROJECTSCHALLENGE/blob/5ecb31447c1b0e67374381d74db7ca4eb73a363d/PROJECT%20005%20%3A%20Controlling%20a%20robot%20Using%20Voice%20Commands/photos/right.png)l)
+
 
 After recording your first sample you can listen back to it to make sure the recording is clear and there is no disturbing background noise.
 

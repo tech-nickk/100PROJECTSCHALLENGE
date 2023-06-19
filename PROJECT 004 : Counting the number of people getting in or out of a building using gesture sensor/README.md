@@ -31,8 +31,17 @@ The device can be installed on top on on the side of the door frame.
 The device is magnetic so it can be attached to metalic door frames without much struggle. It also has a built in battery so no external power connection is required.
 To reset the device simply press the button on the front part.
 Wait for a few seconds for the device to pair with the central device after powering it on.
+
+![Connecting](https://github.com/tech-nickk/100PROJECTSCHALLENGE/blob/372877e3511824b7e5fb691b0fa64e1ba4726a2a/PROJECT%20004%20%3A%20Counting%20the%20number%20of%20people%20getting%20in%20or%20out%20of%20a%20building%20using%20gesture%20sensor/Images/SAVE_20230618_195426.jpg)
+
 Once the both devices are paired it will start taking counts and sending it to the central device.
+
+![Connected](https://github.com/tech-nickk/100PROJECTSCHALLENGE/blob/372877e3511824b7e5fb691b0fa64e1ba4726a2a/PROJECT%20004%20%3A%20Counting%20the%20number%20of%20people%20getting%20in%20or%20out%20of%20a%20building%20using%20gesture%20sensor/Images/SAVE_20230618_195451.jpg)
+
 Several peripheral devices can be used to take poll at different entrances or exits.
+
+![Poll](https://github.com/tech-nickk/100PROJECTSCHALLENGE/blob/372877e3511824b7e5fb691b0fa64e1ba4726a2a/PROJECT%20004%20%3A%20Counting%20the%20number%20of%20people%20getting%20in%20or%20out%20of%20a%20building%20using%20gesture%20sensor/Images/SAVE_20230618_195325.jpg)
+
 
 
 ## Use Cases

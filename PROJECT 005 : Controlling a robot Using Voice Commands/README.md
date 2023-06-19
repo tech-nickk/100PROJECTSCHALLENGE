@@ -47,7 +47,7 @@ An edge device refers to a hardware component responsible for managing the movem
 
 First, create an Edge Impulse account , and create a new project called voice_control.
 
-![create a new project](PROJECT 005 : Controlling a robot Using Voice Commands/photos/create project.png)
+![create a new project][PROJECT 005 : Controlling a robot Using Voice Commands/photos/create project.png]
 
 ### Creating and Curating a Dataset
 

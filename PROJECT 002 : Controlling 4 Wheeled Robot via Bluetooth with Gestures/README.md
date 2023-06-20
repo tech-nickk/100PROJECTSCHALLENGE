@@ -24,7 +24,7 @@ To work on this project, you will need the following components:
 
 
 ## Getting Started
-Follow these steps to set up the project:
+
 
 ### Step 1: Assembling the Robot
 - Assemble the 4-wheeled robot chassis according to the manufacturer's instructions.

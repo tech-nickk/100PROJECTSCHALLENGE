@@ -2,7 +2,11 @@
 
 ![Robot Demo](/images/robot-demo.gif)
 
-The Wrist Controlled 3-Wheeled Robot project allows you to control a robot using wrist tilt gestures via Bluetooth. By utilizing the built-in accelerometers of two Arduino Nano 33 BLE Sense boards, this project enables you to configure the robot's movements, including forward, backward, left, and right.
+The Wrist Controlled 3-Wheeled Robot project allows you to control a robot using wrist tilt gestures via Bluetooth. By utilizing the built-in accelerometer of the Arduino Nano 33 BLE Sense board, this project enables you to configure the robot's movements, including forward, backward, left, and right. I will be using the inbuilt LSM9DS1 Inertial Measurement Unit (IMU) sensor.The LSM9DS1 is a 9-axis sensor that combines a 3-axis accelerometer, a 3-axis gyroscope, and a 3-axis magnetometer. It allows you to measure acceleration, angular velocity, and magnetic field in three dimensions.
+
+The LSM9DS1 sensor is specifically designed for low-power applications and offers high accuracy and sensitivity. It communicates with the Arduino Nano 33 BLE Sense board over the I2C (Inter-Integrated Circuit) interface. This IMU sensor is commonly used in various applications such as motion tracking, robotics, gaming, and virtual reality.
+
+The sensor data will be read in real time and converted to the type of gesture detected. The gesture type data is the written to the peripheral bluetooth device which is the arduino in the robot.
 
 ## Getting Started
 
@@ -24,7 +28,7 @@ To get started with this project, follow the instructions below.
 
 ### Software Setup
 
-1. Clone this repository to your local machine:
+
 
    ```cpp
    
@@ -33,9 +37,7 @@ To get started with this project, follow the instructions below.
    
    ```
 
-Upload the appropriate firmware to each Arduino Nano 33 BLE Sense board using the Arduino IDE.
 
-Install the required libraries for Bluetooth and accelerometer support.
 
 ## Usage
 Power on both Arduino Nano 33 BLE Sense boards and ensure that they are discoverable via Bluetooth.

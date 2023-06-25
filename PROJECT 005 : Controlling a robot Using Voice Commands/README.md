@@ -47,7 +47,11 @@ An edge device refers to a hardware component responsible for managing the movem
 
 First, create an Edge Impulse account , and create a new project called voice_control.
 
+
+
 ![Creating a new project](https://github.com/tech-nickk/100PROJECTSCHALLENGE/blob/8b0377b21e73ee609aed4f66b1da5c4fe04197c8/PROJECT%20005%20%3A%20Controlling%20a%20robot%20Using%20Voice%20Commands/photos/create%20project.png)
+
+
 
 
 ### Creating and Curating a Dataset
@@ -56,12 +60,20 @@ We are ready to start acquiring data for our model. Let's train a ML model that 
 
 The first step is to create a representative dataset of the selected keywords that the ML model is supposed to identify. On Edge Impulse, navigate to Data acquisition on the left menu and then go to the USB icon on the upper right corner and click it to connect your boatrd through web USB.
 
+
+
 ![Data Aquisition](https://github.com/tech-nickk/100PROJECTSCHALLENGE/blob/5ecb31447c1b0e67374381d74db7ca4eb73a363d/PROJECT%20005%20%3A%20Controlling%20a%20robot%20Using%20Voice%20Commands/photos/data%20acquisition.png)
+
+
 
 
 NOTE that you must be using Chrome or Microsoft Edge browser for this to work!. On the Sensor option select the built-in microphone. Set the sample length (in milliseconds) to 2,500 and leave the Frequency (in Hz) as 16,000.
 
+
+
 ![Alt Text](https://github.com/tech-nickk/100PROJECTSCHALLENGE/blob/14820fdfab0237a38633c5b931dc39cd2b65c50b/PROJECT%20005%20%3A%20Controlling%20a%20robot%20Using%20Voice%20Commands/photos/collect%20data%20using%20web%20usb.png)
+
+
 
 
 
@@ -71,11 +83,16 @@ NOTE that you must be using Chrome or Microsoft Edge browser for this to work!. 
 
 
 
+
 ### Collecting New Data
 
 Now, in the Label write front and click on the Start sampling button. This will start sampling your Nano 33 BLE Sense board built-in microphone for 2500 milliseconds. In this period of time say the keyword front, but remember to have the microphone close to you. Record at least 50 samples and repeat this also for the other keywords, back, right, left and stop. You should now start seeing the collected data (each recorded sample) and a graph of each recorded sample on Edge Impulse.
 
+
+
 ![New data](https://github.com/tech-nickk/100PROJECTSCHALLENGE/blob/14820fdfab0237a38633c5b931dc39cd2b65c50b/PROJECT%20005%20%3A%20Controlling%20a%20robot%20Using%20Voice%20Commands/photos/right.png)
+
+
 
 
 
@@ -100,19 +117,35 @@ This is a very basic example of data collection with Edge Impulse. If you want t
 
 Now that we have all the data samples, it's time to design an impulse. An impulse, in a nutshell, is how your ML model is being trained, is where you define the actions that are going to be performed on your input data to make them better suited for ML and a learning block that defines the algorithm for the data classification. Navigate to Impulse design on the left menu and then select Add a processing block and add Audio (MFCC), then select Add learning block and add Classification (Keras). Keep all of the settings at their defaults for each block. Click on the Save impulse button.
 
+
+
 ![Creating Impulse](https://github.com/tech-nickk/100PROJECTSCHALLENGE/blob/4f48040b726df10fccb28d1d57ebd70a85abf20d/PROJECT%20005%20%3A%20Controlling%20a%20robot%20Using%20Voice%20Commands/photos/create%20impulse.png)
+
+
 
 
 ### Generating the Impulse Features
 
 Now, let's generate the features from the input data. With features we are referring to the unique properties of our collected data that will be used by the classification algorithm, to detect keywords in speech. For now, do not change the default settings and parameters.
 
+
+
+
 ![save parameters](https://github.com/tech-nickk/100PROJECTSCHALLENGE/blob/4f48040b726df10fccb28d1d57ebd70a85abf20d/PROJECT%20005%20%3A%20Controlling%20a%20robot%20Using%20Voice%20Commands/photos/features.png)
+
+
+
 
 
 Click on the Save parameters button and then go to the Generate features tab and click on the Generate features button. This process might take some time to complete depending on the size of your dataset. When the process is done you can inspect the obtained results.
 
+
+
+
 ![generate features](https://github.com/tech-nickk/100PROJECTSCHALLENGE/blob/4f48040b726df10fccb28d1d57ebd70a85abf20d/PROJECT%20005%20%3A%20Controlling%20a%20robot%20Using%20Voice%20Commands/photos/generate%20features.png)
+
+
+
 
 
 On the right side you can see a representation of your dataset features.

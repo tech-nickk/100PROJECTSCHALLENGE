@@ -1,4 +1,4 @@
-# Wrist Controlled 3-Wheeled Robot
+# Gesture Controlled 3-Wheeled Robot
 
 ![Robot Demo](/images/robot-demo.gif)
 
